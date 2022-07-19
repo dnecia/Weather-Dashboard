@@ -9,6 +9,20 @@ var citySearchInputEl = document.querySelector("#searched-city");
 var forecastContainerEl = document.querySelector("#fiveday-contianer");
 
 //form submission conditions. Entering city name, if no name entered alert to Enter a city//
+var submitForm = function (event) {
+  event.preventDefault();
+  var city = cityInputEl.ariaValueMax.trim();
+  if (city) {
+    getWeather(city);
+    get5Day(city);
+    cities.unshift({ city });
+    cityInputEl.value = "";
+  } else {
+    alert("Please enter a city");
+  }
+  saveSearch();
+  pastSearch(city);
+};
 //storing searched cities//
 //utiizing api key and openweather site to fetch the weather//
 //clearing old content so that a new search is successful//
