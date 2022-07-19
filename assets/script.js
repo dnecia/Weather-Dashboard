@@ -24,6 +24,10 @@ var submitForm = function (event) {
   pastSearch(city);
 };
 //storing searched cities//
+var saveSearch = function () {
+  localStorage.setItem("cities", JSON.stringify(cities));
+};
+
 //utiizing api key and openweather site to fetch the weather//
 //clearing old content so that a new search is successful//
 //using moment to set the date//
