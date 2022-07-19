@@ -165,3 +165,7 @@ var pastSearch = function (pastSearch) {
 
   pastSearchButtonEl.prepend(pastSearchEl);
 };
+
+//adding an event listener for the submit//
+cityFormEl.addEventListener("submit", submitForm);
+pastSearchButtonEl.addEventListener("click", pastSearch);
