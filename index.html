@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <!--Header and setting up styling for the search and input-->
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <main class="container-fluid">
+      <div class="col-12 col-md-3 p-2 search-column">
+        <!--Section for search city/button-->
+        <form class="border p-2" id="search-city">
+          <h3>Search for a City</h3>
+          <input id="city" type="text" class="form-control my-2" />
+          <button class="btn btn-primary form-control mt-2" type="submit">
+            Saerch
+          </button>
+        </form>
+        <!--previous search section so you can see a list of cities looked up styling set up-->
+        <div class="past-search border" id="previous-search-button"></div>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="row border selected-city" id="current-forecast">
+          <div class="col-12">
+            <h2 id="searched-city"></h2>
+            <div id="current-weather-container" class="list-group"></div>
+          </div>
+        </div>
+        <!--5 day forecast set up -->
+        <div class="row border" id="five-day-forecast">
+          <h3 class="col-12" id="forecast"></h3>
+          <div class="d-flex" id="fiveday-contianer"></div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
