@@ -27,8 +27,26 @@ var submitForm = function (event) {
 var saveSearch = function () {
   localStorage.setItem("cities", JSON.stringify(cities));
 };
-
 //utiizing api key and openweather site to fetch the weather//
+var getWeather = function (city) {
+  var apiKey = "e37434abc7cdd3f1fcace9a17b2487ef";
+  var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+  //fetch the data//
+  fetch(apiURL).then(function (response) {
+    response.json().then(function (data) {
+      displayWeather(data, city);
+    });
+  });
+};
 //clearing old content so that a new search is successful//
+var displayWeather = function (weather, searchCity) {
+  weatherContainerEl.textContent = "";
+  citySearchInputEl.textContent = searchCity;
+};
 //using moment to set the date//
+var currentDate = document.createElement("span");
+currentDate.textContent =
+  " (" + moment(weather.dt.value).format("MMM D, YYYY") + ") ";
+citySearchInputEl.appendChild(currentDate);
+
 //adding the weather icons to reflect the current weather conditions
