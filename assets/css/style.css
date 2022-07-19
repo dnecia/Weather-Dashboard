@@ -1,0 +1,12 @@
+/*Heading styling*/
+header {
+  display: flex center;
+  min-height: 15px;
+  background: repeating-radial-gradient(rgb(58, 76, 215), rgb(29, 27, 27));
+  color: white;
+}
+/* Search column color */
+
+.search-column {
+  background-color: white;
+}
