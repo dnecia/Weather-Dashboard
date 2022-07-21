@@ -10,3 +10,31 @@ header {
 .search-column {
   background-color: white;
 }
+
+/*styling for the list of uv, wind,humidity, uv */
+.list-group-item {
+  line-height: 0.5;
+  border: none;
+}
+
+.card-body {
+  flex: auto;
+}
+
+/* Uv index styling for severe, moderate, favorable*/
+span.severe {
+  padding: 3px;
+  background-color: rgb(128, 0, 0);
+  color: white;
+}
+
+span.moderate {
+  padding: 3px;
+  background-color: yellow;
+}
+
+span.favorable {
+  padding: 3px;
+  background-color: green;
+  color: white;
+}

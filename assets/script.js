@@ -1,17 +1,19 @@
 //variables to be used throughout script file//
 var cities = [];
+
 var cityFormEl = document.querySelector("#search-city");
 var cityInputEl = document.querySelector("#city");
 var pastSearchButtonEl = document.querySelector("#previous-search-button");
 var forecastTitle = document.querySelector("#forecast");
 var weatherContainerEl = document.querySelector("#current-weather-contianer");
 var citySearchInputEl = document.querySelector("#searched-city");
+
 var forecastContainerEl = document.querySelector("#fiveday-contianer");
 
 //form submission conditions. Entering city name, if no name entered alert to Enter a city//
 var submitForm = function (event) {
   event.preventDefault();
-  var city = cityInputEl.ariaValueMax.trim();
+  var city = cityInputEl.value.trim();
   if (city) {
     getWeather(city);
     get5Day(city);
@@ -30,7 +32,8 @@ var saveSearch = function () {
 //utiizing api key and openweather site to fetch the weather//
 var getWeather = function (city) {
   var apiKey = "e37434abc7cdd3f1fcace9a17b2487ef";
-  var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+  var apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
   //fetch the data//
   fetch(apiURL).then(function (response) {
     response.json().then(function (data) {
