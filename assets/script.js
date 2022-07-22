@@ -182,7 +182,7 @@ var pastSearch = function (pastSearch) {
   pastSearchButtonEl.prepend(pastSearchEl);
 };
 
-var pastSearch = function (event) {
+var pastSearchOption = function (event) {
   var city = event.target.getAttribute("data-city");
   if (city) {
     getWeather(city);
@@ -193,4 +193,4 @@ var pastSearch = function (event) {
 //adding an event listener for the submit//
 
 cityFormEl.addEventListener("submit", submitForm);
-pastSearchButtonEl.addEventListener("click", pastSearchHandler);
+pastSearchButtonEl.addEventListener("click", pastSearchOption);
