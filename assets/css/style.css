@@ -24,7 +24,7 @@ header {
 /* Uv index styling for severe, moderate, favorable*/
 span.severe {
   padding: 3px;
-  background-color: rgb(128, 0, 0);
+  background-color: purple;
   color: white;
 }
 
