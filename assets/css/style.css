@@ -1,7 +1,7 @@
 /*Heading styling*/
 header {
   display: flex center;
-  min-height: 15px;
+  min-height: 10vh;
   background: repeating-radial-gradient(rgb(58, 76, 215), rgb(29, 27, 27));
   color: white;
 }
